@@ -388,7 +388,7 @@ option {
   color: #42a779;
 }
 .field--required .field__title::after {
-  content: "*";
+  content: " *";
 }
 
 .field__text {
