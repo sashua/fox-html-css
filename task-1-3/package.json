@@ -1,0 +1,17 @@
+{
+  "name": "task-1-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "sass --watch sass/main.scss css/style.css",
+    "build": "sass sass/main.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "sereda.san@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "modern-normalize": "^1.1.0",
+    "sass": "^1.55.0"
+  }
+}
