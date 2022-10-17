@@ -1,3 +1,12 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: $primaryFont;
+  background-color: $bodyBgColor;
+}
+
 h1,
 h2,
 h3,
@@ -14,4 +23,23 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+select,
+input,
+textarea {
+  color: inherit;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+option {
+  padding: 0;
 }

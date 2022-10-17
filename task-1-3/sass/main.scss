@@ -1,4 +1,10 @@
-@import "../node_modules/modern-normalize/modern-normalize";
+@import "./modern-normalize";
 
 @import "./variables";
 @import "./base";
+
+@import "./button";
+@import "./checkbox";
+@import "./range";
+@import "./field";
+@import "./form";

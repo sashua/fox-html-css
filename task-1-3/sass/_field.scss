@@ -1,0 +1,52 @@
+.field__title {
+  line-height: 1.5;
+  font-weight: 700;
+  color: $accentColor;
+
+  .field--required &::after {
+    content: "*";
+  }
+}
+
+.field__text {
+  width: 100%;
+  padding: 0.5em;
+  border: $borderDefault;
+  border-radius: $borderRadiusM;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    border-color: $accentActiveColor;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: $errorColor;
+  }
+
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
+.field__items {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.25em;
+}
+
+.field__select {
+  width: 100%;
+  padding: 0.5em;
+  border: $borderDefault;
+  border-radius: $borderRadiusM;
+}
+
+.field__file::-webkit-file-upload-button {
+  @extend .button;
+  margin-right: 1em;
+}
