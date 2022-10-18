@@ -1,0 +1,100 @@
+:root {
+  --packman-size: 80px;
+  --packman-color: yellow;
+
+  --food-size: 20px;
+  --food-color: white;
+  --food-gap: 120px;
+
+  --bg-color: black;
+
+  --animation-time: 0.5s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+
+  background-color: var(--bg-color);
+}
+
+/* === Packman start === */
+.pacman {
+  position: relative;
+  width: calc(7 * var(--food-gap));
+}
+
+.pacman::before,
+.pacman::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--packman-size) / -2);
+  left: 0;
+
+  border: calc(var(--packman-size) / 2) solid var(--packman-color);
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  animation: eat var(--animation-time) linear infinite;
+}
+.pacman::before {
+  animation-direction: alternate;
+}
+.pacman::after {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes eat {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+/* --- Packman end --- */
+
+/* === Food start === */
+.food {
+  position: absolute;
+  top: calc(-0.5 * var(--food-size));
+  left: 0;
+
+  width: var(--food-size);
+  height: var(--food-size);
+
+  background-color: transparent;
+  border-radius: 50%;
+
+  box-shadow: 0 0 var(--food-color),
+    calc(1 * var(--food-gap)) 0 var(--food-color),
+    calc(2 * var(--food-gap)) 0 var(--food-color),
+    calc(3 * var(--food-gap)) 0 var(--food-color),
+    calc(4 * var(--food-gap)) 0 var(--food-color),
+    calc(5 * var(--food-gap)) 0 var(--food-color),
+    calc(6 * var(--food-gap)) 0 var(--food-color),
+    calc(7 * var(--food-gap)) 0 var(--food-color);
+
+  animation: move var(--animation-time) linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--food-gap)));
+  }
+}
+/* --- Food end --- */
