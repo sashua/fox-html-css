@@ -347,9 +347,10 @@ option {
 }
 
 .range {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5em;
+  width: 100%;
 }
 
 .range__input {
@@ -383,6 +384,7 @@ option {
 }
 
 .field__title {
+  display: block;
   line-height: 1.5;
   font-weight: 700;
   color: #42a779;
@@ -461,7 +463,7 @@ option {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 719px) {
   .form__fields {
     grid-template-columns: unset;
   }
@@ -470,7 +472,7 @@ option {
 .form__field--wide {
   grid-column: 1/3;
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 719px) {
   .form__field--wide {
     grid-column: unset;
   }

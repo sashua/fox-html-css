@@ -33,7 +33,7 @@
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 719px) {
     grid-template-columns: unset;
   }
 }
@@ -41,7 +41,7 @@
 .form__field--wide {
   grid-column: 1 / 3;
 
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 719px) {
     grid-column: unset;
   }
 }
