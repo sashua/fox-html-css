@@ -27,12 +27,12 @@
 }
 
 .range__value {
+  @include border($accentColor);
+
   min-width: 3.5em;
   padding: 0.5em;
   font-weight: 700;
   text-align: center;
   color: #fff;
   background-color: $accentColor;
-  border: $borderAccent;
-  border-radius: $borderRadiusM;
 }

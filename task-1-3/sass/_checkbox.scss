@@ -5,14 +5,14 @@
   cursor: pointer;
 
   &::before {
+    @include border;
+
     content: "";
     display: inline-block;
     width: 1em;
     height: 1em;
     padding: 2px;
     background-clip: content-box;
-    border: $borderDefault;
-    border-radius: $borderRadiusM;
     transition: background-color $transitionDefault,
       border-color $transitionDefault;
   }
@@ -32,7 +32,7 @@
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
+  border: none;
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);

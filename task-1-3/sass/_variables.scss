@@ -12,9 +12,10 @@ $primaryBgColor: #fefefe;
 $secondaryBgColor: #ededed;
 
 $borderColor: #dbdbdb;
+$borderWidth: 2px;
 $borderRadiusM: 4px;
 $borderRadiusL: 8px;
-$borderDefault: 2px solid $borderColor;
-$borderAccent: 2px solid $accentColor;
 
 $transitionDefault: 0.25s;
+
+$desktopBreakpoint: 720px;

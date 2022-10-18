@@ -10,10 +10,10 @@
 }
 
 .field__text {
+  @include border;
+
   width: 100%;
   padding: 0.5em;
-  border: $borderDefault;
-  border-radius: $borderRadiusM;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -41,13 +41,14 @@
 }
 
 .field__select {
+  @include border;
+
   width: 100%;
   padding: 0.5em;
-  border: $borderDefault;
-  border-radius: $borderRadiusM;
 }
 
 .field__file::-webkit-file-upload-button {
   @extend .button;
+
   margin-right: 1em;
 }

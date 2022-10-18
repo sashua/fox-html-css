@@ -1,9 +1,9 @@
 .button {
+  @include border($accentColor);
+
   padding: 0.5em 1em;
   color: #fff;
   background-color: $accentColor;
-  border: $borderAccent;
-  border-radius: $borderRadiusM;
   transition: background-color $transitionDefault,
     border-color $transitionDefault;
 
