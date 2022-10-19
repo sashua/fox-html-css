@@ -1,6 +1,6 @@
 :root {
-  --packman-size: 80px;
-  --packman-color: yellow;
+  --pacman-size: 80px;
+  --pacman-color: yellow;
 
   --food-size: 20px;
   --food-color: white;
@@ -39,10 +39,10 @@ body {
 .pacman::after {
   content: "";
   position: absolute;
-  top: calc(var(--packman-size) / -2);
+  top: calc(var(--pacman-size) / -2);
   left: 0;
 
-  border: calc(var(--packman-size) / 2) solid var(--packman-color);
+  border: calc(var(--pacman-size) / 2) solid var(--pacman-color);
   border-right-color: transparent;
   border-radius: 50%;
 
