@@ -1,4 +1,12 @@
-doc/
-
+.vscode/
 .DS_Store
 Thumbs.db
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+node_modules/
+
+doc/
