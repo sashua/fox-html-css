@@ -1,0 +1,8 @@
+$perspective: 20px;
+$farLayerDistance: -10px;
+$closeLayerDistance: 5px;
+
+@mixin moveByZ($distance) {
+  transform: translateZ($distance)
+    scale(calc(($perspective - $distance) / $perspective + 0.01));
+}
