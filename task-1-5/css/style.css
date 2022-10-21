@@ -1,0 +1,69 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 20px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax__group--top {
+  z-index: 1;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.parallax__layer--far {
+  transform: translateZ(-10px) scale(1.51);
+}
+.parallax__layer--close {
+  transform: translateZ(5px) scale(0.76);
+}
+
+/*# sourceMappingURL=style.css.map */
