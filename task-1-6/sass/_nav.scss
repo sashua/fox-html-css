@@ -1,0 +1,36 @@
+.nav {
+  min-width: 20em;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 2em 0;
+
+  background-color: $secondBgColor;
+  @include border(right);
+}
+
+.nav-item {
+  @include border(bottom);
+}
+
+.nav-title {
+  display: block;
+  margin-bottom: 1em;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $primAccentColor;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75em 3em;
+
+  &:hover {
+    @include border(right, 4px, $primAccentColor);
+  }
+}

@@ -1,0 +1,58 @@
+.main {
+  max-height: 100vh;
+  padding: 2em 10em;
+  overflow-y: auto;
+
+  color: $primColor;
+  background-color: $primBgColor;
+}
+
+.page-title {
+  margin-bottom: 1em;
+
+  font-size: 3rem;
+}
+
+.subtitle {
+  margin: 1em 0;
+  padding-top: 1em;
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  color: $secondColor;
+  @include border(top);
+}
+
+.prop-title {
+  margin: 1em 0;
+  padding-left: 0.5em;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  @include border(left, 8px, $primAccentColor);
+}
+
+.text {
+  margin-bottom: 1em;
+
+  line-height: 1.75;
+}
+
+.code {
+  padding: 0.1em 0.25em;
+
+  font-family: $monoFont;
+
+  background-color: $secondAccentBgColor;
+
+  .pre > & {
+    display: block;
+    padding: 0.5em 2em;
+
+    line-height: 1.5;
+
+    @include border(left, 8px, $secondAccentColor);
+  }
+}
