@@ -1,0 +1,18 @@
+$primFont: "Roboto", sans-serif;
+$monoFont: "Roboto Mono", monospace;
+
+$primColor: #1a1a1a;
+$secondColor: #6b6b6b;
+
+$primAccentColor: #61dafb;
+$secondAccentColor: #ffe564;
+$secondAccentBgColor: rgba(255, 229, 100, 0.15);
+
+$primBgColor: #fff;
+$secondBgColor: #f7f7f7;
+
+$primBorderColor: #ececec;
+
+@mixin border($direction, $width: 1px, $color: $primBorderColor) {
+  border-#{$direction}: $width solid $color;
+}
