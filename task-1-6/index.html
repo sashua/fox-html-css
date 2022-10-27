@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS display Property</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-title" href="#display-property">CSS display</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inline">inline</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#block">block</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inline-block">inline-block</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#flex">flex</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inline-flex">inline-flex</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#grid">grid</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inline-grid">inline-grid</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#table">table</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inline-table">inline-table</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#list-item">list-item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#run-in">run-in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contents">contents</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#initial">initial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inherit">inherit</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#none">none</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+      <h1 class="page-title" id="display-property">CSS display Property</h1>
+      <p class="text">
+        In CSS, the <code class="code">display</code> property specifies the
+        display behavior (the type of rendering box) of an element.
+      </p>
+      <p class="text">
+        There are inline and block-level elements in CSS. The difference between
+        the two is that inline elements don&#39;t take up an entire space – that
+        is, they don&#39;t start on a new line – but block elements do. Also, to
+        implement the Flexbox and Grid layouts, you need to use the display
+        property.
+      </p>
+      <h2 class="subtitle">Basic Syntax</h2>
+      <pre class="pre"><code class="code">element {
+    display: value;
+}</code></pre>
+      <h2 class="subtitle">Property Values</h2>
+      <p class="text">
+        The <code class="code">display</code> property takes many different
+        values such as <code class="code">inline</code>,
+        <code class="code">inline-block</code>, <code class="code">block</code>,
+        <code class="code">grid</code>, and more, which all influence the layout
+        and presentation of an element on the web page.
+      </p>
+      <p class="text">
+        You can use this display property to change an
+        <code class="code">inline</code> element to
+        <code class="code">block</code>, <code class="code">block</code> element
+        to <code class="code">inline</code>, <code class="code">block</code> and
+        <code class="code">inline</code> elements to
+        <code class="code">inline-block</code>, and many more.
+      </p>
+      <h3 class="prop-title" id="inline">inline</h3>
+      <p class="text">
+        An element with a display property set to
+        <code class="code">inline</code> will not start on a new line and it
+        will take up the remaining/available screen width. It just takes up the
+        space such an element would normally take.
+      </p>
+      <p class="text">
+        Because of this, you can&#39;t set the
+        <code class="code">width</code> and <code class="code">height</code> of
+        an element that has a display of <code class="code">inline</code>,
+        becuase it does not take up the whole screen width. Some elements are
+        inline by default, like <code class="code">&lt;span&gt;</code>,
+        <code class="code">&lt;a&gt;</code>,
+        <code class="code">&lt;i&gt;</code>, and
+        <code class="code">&lt;img&gt;</code>.
+      </p>
+      <h3 class="prop-title" id="block">block</h3>
+      <p class="text">
+        An element that has the display property set to
+        <code class="code">block</code> starts on a new line and takes up the
+        available screen width.
+      </p>
+      <p class="text">
+        You can specify the <code class="code">width</code> and
+        <code class="code">height</code> properties for such elements. Examples
+        of elements that are at block-level by default are
+        <code class="code">&lt;div&gt;</code>,
+        <code class="code">&lt;section&gt;</code>,
+        <code class="code">&lt;p&gt;</code>, and lots more. You can set the
+        <code class="code">&lt;span&gt;</code> element to
+        <code class="code">block</code> display and it will behave like a
+        block-level element.
+      </p>
+      <h3 class="prop-title" id="inline-block">inline-block</h3>
+      <p class="text">
+        An element you assign a display of
+        <code class="code">inline-block</code> is inline by presentation. But it
+        has the added advantage of you being able to apply
+        <code class="code">width</code> and <code class="code">height</code> to
+        it, which you can&#39;t do when the element is assigned a dispaly of
+        <code class="code">inline</code>.
+      </p>
+      <p class="text">
+        So, you can look at the <code class="code">inline-block</code> display
+        as an inline element and block element in one package.
+      </p>
+      <h3 class="prop-title" id="flex">flex</h3>
+      <p class="text">
+        Displays an element as a block-level flex container and lays out its
+        content according to the Flexbox model.
+      </p>
+      <h3 class="prop-title" id="inline-flex">inline-flex</h3>
+      <p class="text">Displays an element as an inline-level flex container.</p>
+      <h3 class="prop-title" id="grid">grid</h3>
+      <p class="text">
+        Displays an element as a block-level grid container and lays out its
+        content according to the grid model.
+      </p>
+      <h3 class="prop-title" id="inline-grid">inline-grid</h3>
+      <p class="text">Displays an element as an inline-level grid container.</p>
+      <h3 class="prop-title" id="table">table</h3>
+      <p class="text">
+        Let the element behave like a
+        <code class="code">&lt;table&gt;</code> element. So you can make a
+        replica of an HTML table without using the
+        <code class="code">&lt;table&gt;</code> element and corresponding
+        elements such as <code class="code">&lt;tr&gt;</code> and
+        <code class="code">&lt;td&gt;</code>.
+      </p>
+      <h3 class="prop-title" id="inline-table">inline-table</h3>
+      <p class="text">
+        Behaves like an HTML <code class="code">&lt;table&gt;</code> element,
+        but as an inline box, rather than a block-level box.
+      </p>
+      <h3 class="prop-title" id="list-item">list-item</h3>
+      <p class="text">
+        Let the element behave like a
+        <code class="code">&lt;li&gt;</code> element.
+      </p>
+      <h3 class="prop-title" id="run-in">run-in</h3>
+      <p class="text">
+        Displays an element as either block or inline, depending on context.
+      </p>
+      <h3 class="prop-title" id="contents">contents</h3>
+      <p class="text">
+        Makes the container disappear, making the child elements children of the
+        element the next level up in the DOM.
+      </p>
+      <h3 class="prop-title" id="initial">initial</h3>
+      <p class="text">
+        Sets this property of an element to its default value. So, if you set
+        the display property of a <code class="code">&lt;span&gt;</code> to
+        initial, it remains inline, and if you set the same value for a
+        <code class="code">&lt;div&gt;</code>, it remains block.
+      </p>
+      <h3 class="prop-title" id="inherit">inherit</h3>
+      <p class="text">
+        This makes the element inherit the display property of its parent. So,
+        if you have a <code class="code">&lt;span&gt;</code> tag inside a
+        <code class="code">&lt;div&gt;</code> and you give the
+        <code class="code">&lt;span&gt;</code> tag a display of
+        <code class="code">inherit</code>, it turns it from inline to block
+        element.
+      </p>
+      <h3 class="prop-title" id="none">none</h3>
+      <p class="text">
+        Turns off the display of an element so that it has no effect on layout
+        (the document is rendered as though the element did not exist). All
+        descendant elements also have their display turned off.
+      </p>
+      <p class="text">
+        This also means that devices like screen readers, which make websites
+        accessible to blind people, wont&#39;t have access to the element.
+      </p>
+    </main>
+  </body>
+</html>
