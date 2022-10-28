@@ -1,0 +1,80 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__trigger {
+  @extend %visually-hidden;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  opacity: 0;
+  transition: opacity $animationSlide;
+}
+
+.carousel__controls {
+  position: absolute;
+  z-index: 1;
+
+  &--prev,
+  &--next {
+    top: 0;
+    bottom: 0;
+    width: 25%;
+
+    opacity: 0.5;
+    transition: opacity $animationHover;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &--prev {
+    left: 0;
+    @include shadowedBg(right);
+  }
+  &--next {
+    right: 0;
+    @include shadowedBg(left);
+  }
+
+  &--progress {
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+}
+
+@for $i from 1 through 3 {
+  // Swithing slides
+  #slide#{$i}:checked ~ .carousel__slides > .carousel__slide:nth-child(#{$i}) {
+    opacity: 1;
+  }
+
+  // Swithing prev and next buttons
+  #slide#{$i}:checked
+    ~ .carousel__controls--prev
+    > .carousel__btn:nth-child(#{$i}),
+  #slide#{$i}:checked
+    ~ .carousel__controls--next
+    > .carousel__btn:nth-child(#{$i}) {
+    visibility: visible;
+  }
+
+  // Swithing dots
+  #slide#{$i}:checked
+    ~ .carousel__controls--progress
+    > .carousel__btn:nth-child(#{$i}) {
+    background-color: $buttonColor;
+  }
+}

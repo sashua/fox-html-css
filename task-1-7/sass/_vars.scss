@@ -1,0 +1,29 @@
+$fallbackBgColor: #be95c4;
+
+$shadowColor: rgba(0, 0, 0, 0.75);
+
+$buttonColor: #fff;
+$buttonShadow: 0.35rem 0.35rem 0.45rem $shadowColor;
+$buttonPrevImage: "../assets/left.svg";
+$buttonNextImage: "../assets/right.svg";
+
+$animationHover: 0.25s;
+$animationSlide: 0.75s;
+$animationTitle: 0.5s 0.5s;
+$animationText: 0.5s 0.75s;
+
+@mixin materialTheme {
+  font-family: "Roboto", sans-serif;
+  color: #1f1f1f;
+  background-image: url("../assets/material.jpg");
+}
+@mixin carbonTheme {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #161616;
+  background-image: url("../assets/carbon.jpg");
+}
+@mixin lightningTheme {
+  font-family: "Abel", sans-serif;
+  color: #fff;
+  background-image: url("../assets/lightning.webp");
+}
