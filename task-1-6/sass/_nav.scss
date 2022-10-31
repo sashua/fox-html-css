@@ -6,31 +6,31 @@
 
   background-color: $secondBgColor;
   @include border(right);
-}
 
-.nav-item {
-  @include border(bottom);
-}
-
-.nav-title {
-  display: block;
-  margin-bottom: 1em;
-
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $primAccentColor;
+  &-item {
+    @include border(bottom);
   }
-}
 
-.nav-link {
-  display: block;
-  padding: 0.75em 3em;
+  &-title {
+    display: block;
+    margin-bottom: 1em;
 
-  &:hover {
-    @include border(right, 4px, $primAccentColor);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $primAccentColor;
+    }
+  }
+
+  &-link {
+    display: block;
+    padding: 0.75em 3em;
+
+    &:hover {
+      @include border(right, 4px, $primAccentColor);
+    }
   }
 }
