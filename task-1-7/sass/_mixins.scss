@@ -1,0 +1,27 @@
+@mixin materialTheme {
+  font-family: $materialFont;
+  color: $materialColor;
+  background-image: $materialImage;
+}
+@mixin carbonTheme {
+  font-family: $carbonFont;
+  color: $carbonColor;
+  background-image: $carbonImage;
+}
+@mixin lightningTheme {
+  font-family: $lightningFont;
+  color: $lightningColor;
+  background-image: $lightningImage;
+}
+
+@mixin absoluteAllSpace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin shadowedBg($direction, $color: $shadowColor) {
+  background: linear-gradient(to $direction, $color, transparent);
+}

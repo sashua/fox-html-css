@@ -45,8 +45,8 @@ ul {
 .btn--prev, .btn--next {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
   visibility: hidden;
   background: url("../assets/left.svg") left 20% center/20% no-repeat;

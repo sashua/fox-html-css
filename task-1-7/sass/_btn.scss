@@ -3,11 +3,7 @@
 
   &--prev,
   &--next {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    @include absoluteAllSpace;
 
     visibility: hidden;
     background: url($buttonPrevImage) left 20% center / 20% no-repeat;
