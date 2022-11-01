@@ -249,4 +249,60 @@ summary {
   display: list-item;
 }
 
+@font-face {
+  font-family: "Objective";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../assets/fonts/Objective-Regular.woff2") format("woff2"), url("../../assets/fonts/Objective-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Objective";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../assets/fonts/Objective-Medium.woff2") format("woff2"), url("../../assets/fonts/Objective-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Objective";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../assets/fonts/Objective-Bold.woff2") format("woff2"), url("../../assets/fonts/Objective-Bold.otf") format("opentype");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Objective", sans-serif;
+  background-color: #e5e5e5;
+}
+
 /*# sourceMappingURL=style.css.map */
