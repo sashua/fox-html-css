@@ -1,0 +1,39 @@
+.hero {
+  padding: 158px 0 76px;
+
+  background: $heroBg;
+  box-shadow: $heroShadow;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  padding-left: 176px;
+}
+
+.hero__content {
+  flex-basis: 636px;
+}
+
+.hero__title {
+  margin-bottom: 14px;
+
+  @include font($weight: 500, $size: 50px, $height: 1.4, $spacing: 0.02em);
+}
+
+.hero__text {
+  margin-bottom: 60px;
+
+  @include font($size: 20px, $height: 1.8);
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero__image {
+  flex-basis: 440px;
+}

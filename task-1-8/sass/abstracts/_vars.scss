@@ -1,23 +1,22 @@
 $fontsDir: "../../assets/fonts";
 $primFont: "Objective", sans-serif;
 
+$blackColor: #000;
+$whiteColor: #fff;
+
 $primAccentColor: #4a99d3;
 $secAccentColor: #d3844a;
 
 $primColor: #260041;
 $secColor: #0f001a;
 
-$primBgColor: #e5e5e5;
+$primBgColor: $whiteColor;
 $secBgColor: rgba(74, 153, 211, 0.1);
-$heroBg: linear-gradient(1.02deg, #4a99d3 -17.33%, rgba(74, 153, 211, 0) 75.91%),
-  #ffffff;
+$heroBg: linear-gradient(to bottom, $primAccentColor -300%, $primBgColor 75%);
 
-$heroShadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+$heroShadow: 0px 4px 16px rgba(75, 0, 129, 0.1);
 $cardShadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
 $btnShadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-
-$blackColor: #000;
-$whiteColor: #fff;
 
 $radiiS: 3px;
 $radiiM: 4px;

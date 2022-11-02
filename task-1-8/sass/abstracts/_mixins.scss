@@ -11,8 +11,8 @@
 @mixin font(
   $family: null,
   $style: null,
-  $size: null,
   $weight: null,
+  $size: null,
   $height: null,
   $spacing: null
 ) {

@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  min-height: 60px;
+  padding: 12px;
+
+  background-color: $primAccentColor;
+  border-radius: $radiiL;
+}
