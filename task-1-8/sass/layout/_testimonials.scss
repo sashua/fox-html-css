@@ -1,0 +1,30 @@
+.testimonials {
+  position: relative;
+  padding: 150px 0 0;
+  background: url($dotsImg) no-repeat top 385px right / 155px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 185px;
+    left: 0;
+    display: block;
+    width: 47.5%;
+    height: 520px;
+
+    background: linear-gradient(to bottom, transparent 120px, $secBgColor 120px),
+      url($userImg) no-repeat bottom 0 right 100px;
+  }
+}
+
+.testimonials__title {
+  margin-bottom: 208px;
+
+  @include font($weight: 700, $size: 26px, $height: 1);
+  text-align: center;
+}
+
+.testimonials__slider {
+  margin-left: auto;
+  max-width: 420px;
+}

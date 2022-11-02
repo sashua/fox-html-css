@@ -1,0 +1,54 @@
+.slider__pages {
+  margin-bottom: 37px;
+}
+
+.slider__page {
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+
+    color: $secColor;
+    background: url($quotesImg);
+  }
+}
+
+.slider__text {
+  margin-bottom: 40px;
+  @include font($height: 1.5);
+  opacity: 0.5;
+}
+
+.slider__username {
+  @include font($weight: 500, $size: 18px, $height: 1);
+}
+
+.slider__controls {
+  display: flex;
+  max-width: 160px;
+  margin-left: auto;
+  box-shadow: $btnShadow;
+}
+
+.slider__button {
+  padding: 20px;
+  color: $primAccentColor;
+
+  &:first-child {
+    border-top-left-radius: $radiiM;
+    border-bottom-left-radius: $radiiM;
+  }
+
+  &:last-child {
+    border-top-right-radius: $radiiM;
+    border-bottom-right-radius: $radiiM;
+  }
+
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    background-color: $primAccentColor;
+  }
+}
