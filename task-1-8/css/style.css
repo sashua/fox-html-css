@@ -307,6 +307,10 @@ img {
   height: auto;
 }
 
+svg {
+  fill: currentColor;
+}
+
 body {
   font-family: "Objective", sans-serif;
   color: #260041;
@@ -340,10 +344,60 @@ body {
   border-radius: 5px;
 }
 
+.card {
+  max-width: 380px;
+  padding: 48px;
+  background-color: #fff;
+  box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+  border-radius: 10px;
+}
+
+.card__img-wrap {
+  position: relative;
+  height: 132px;
+  margin-bottom: 56px;
+}
+
+.card__img {
+  position: absolute;
+  bottom: 0;
+}
+
+.card__title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #0f001a;
+}
+
+.card__text {
+  height: 6.48em;
+  margin-bottom: 52px;
+  line-height: 1.62;
+  color: #0f001a;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #4a99d3;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 15px;
+}
+.container--narrow {
+  padding: 0 175px;
 }
 
 .header {
@@ -358,7 +412,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 176px;
 }
 
 .hero {
@@ -371,7 +424,7 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-left: 176px;
+  padding-right: 15px;
 }
 
 .hero__content {
@@ -399,6 +452,39 @@ body {
 
 .hero__image {
   flex-basis: 440px;
+}
+
+.mission {
+  padding: 150px 0;
+  background: url("../assets/images/dots.svg") no-repeat top 85px right 12.5%/155px, url("../assets/images/dots.svg") no-repeat bottom 75px right 12.5%/155px, url("../assets/images/dots.svg") no-repeat center left 16.5%/155px, url(../assets/images/squares-1.svg) no-repeat top right -65px/255px, url(../assets/images/squares-2.svg) no-repeat bottom left -65px/255px;
+}
+
+.mission__content {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.mission__title {
+  position: absolute;
+  top: 0;
+  max-width: 395px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: 0.05em;
+}
+
+.mission__cards {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 110px;
+  padding-top: 12px;
+}
+
+.mission__card:nth-child(even) {
+  transform: translateY(calc(50% + 55px));
 }
 
 /*# sourceMappingURL=style.css.map */

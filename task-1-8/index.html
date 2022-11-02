@@ -10,7 +10,7 @@
   <body>
     <!-- Header section -->
     <header class="header">
-      <div class="container header__container">
+      <div class="container container--narrow header__container">
         <a class="logo" href="index.html">LOGO</a>
         <nav class="nav">
           <ul class="nav__list">
@@ -27,7 +27,7 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container hero__container">
+        <div class="container container--narrow hero__container">
           <div class="hero__content">
             <h1 class="hero__title">New E-commerce App best for You</h1>
             <p class="hero__text">
@@ -56,50 +56,71 @@
 
       <!-- Mission section -->
       <section class="mission">
-        <h2 class="mission__title">
-          What we do to help our customers in digital era.
-        </h2>
-        <ul class="mission__cards">
-          <li class="card mission__card">
-            <h4 class="card__title">Send</h4>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a class="link card__link" href="#!"
-              >Learn more
-              <svg class="link__svg">
-                <use href="#!"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="card mission__card">
-            <h4 class="card__title">Receive</h4>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a class="link card__link" href="#!"
-              >Learn more
-              <svg class="link__svg">
-                <use href="#!"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="card mission__card">
-            <h4 class="card__title">Buy</h4>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a class="link card__link" href="#!"
-              >Learn more
-              <svg class="link__svg">
-                <use href="#!"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="container container--narrow">
+          <div class="mission__content">
+            <h2 class="mission__title">
+              What we do to help our customers in digital era.
+            </h2>
+            <ul class="mission__cards">
+              <li class="card mission__card">
+                <div class="card__img-wrap">
+                  <img
+                    class="card__img"
+                    src="./assets/images/send.svg"
+                    alt=""
+                  />
+                </div>
+                <h4 class="card__title">Send</h4>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="card__link" href="#!"
+                  >Learn more
+                  <svg width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="card mission__card">
+                <div class="card__img-wrap">
+                  <img
+                    class="card__img"
+                    src="./assets/images/receive.svg"
+                    alt=""
+                  />
+                </div>
+                <h4 class="card__title">Receive</h4>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="card__link" href="#!"
+                  >Learn more
+                  <svg width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="card mission__card">
+                <div class="card__img-wrap">
+                  <img class="card__img" src="./assets/images/buy.svg" alt="" />
+                </div>
+                <h4 class="card__title">Buy</h4>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a class="card__link" href="#!"
+                  >Learn more
+                  <svg width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- About section -->

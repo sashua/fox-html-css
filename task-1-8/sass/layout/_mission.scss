@@ -1,0 +1,35 @@
+.mission {
+  padding: 150px 0;
+
+  background: url($dotsImg) no-repeat top 85px right 12.5% / 155px,
+    url($dotsImg) no-repeat bottom 75px right 12.5% / 155px,
+    url($dotsImg) no-repeat center left 16.5% / 155px,
+    url(#{$squaresImg + "-1.svg"}) no-repeat top right -65px / 255px,
+    url(#{$squaresImg + "-2.svg"}) no-repeat bottom left -65px / 255px;
+}
+
+.mission__content {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.mission__title {
+  position: absolute;
+  top: 0;
+  max-width: 395px;
+
+  @include font($weight: 500, $size: 36px, $height: 1.28, $spacing: 0.05em);
+}
+
+.mission__cards {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 110px;
+  padding-top: 12px;
+}
+
+.mission__card:nth-child(even) {
+  transform: translateY(calc(50% + 55px));
+}

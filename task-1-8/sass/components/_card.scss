@@ -1,0 +1,49 @@
+.card {
+  max-width: 380px;
+  padding: 48px;
+
+  background-color: $primBgColor;
+  box-shadow: $cardShadow;
+  border-radius: $radiiXL;
+}
+
+.card__img-wrap {
+  position: relative;
+
+  height: 132px;
+  margin-bottom: 56px;
+}
+
+.card__img {
+  position: absolute;
+  bottom: 0;
+}
+
+.card__title {
+  margin-bottom: 16px;
+
+  @include font($weight: 500, $size: 20px, $height: 1.5, $spacing: 0.02em);
+  color: $secColor;
+}
+
+.card__text {
+  $line-height: 1.62;
+
+  height: 1em * 4 * $line-height;
+  margin-bottom: 52px;
+
+  @include font($height: $line-height);
+  color: $secColor;
+
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @include font($weight: 500, $size: 14px, $spacing: 0.05em);
+  color: $primAccentColor;
+}
