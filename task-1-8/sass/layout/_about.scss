@@ -1,0 +1,37 @@
+.about {
+  padding: 95px 0;
+
+  text-align: center;
+
+  background-color: $secBgColor;
+}
+
+.about__title {
+  margin-bottom: 88px;
+
+  @include font($weight: 700, $size: 26px, $height: 1);
+  color: $primAccentColor;
+}
+
+.about__steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.about__step {
+  max-width: 250px;
+
+  color: $secColor;
+}
+
+.about__subtitle {
+  margin: 30px 0 10px;
+
+  @include font($weight: 500, $size: 18px, $height: 1);
+}
+
+.about__text {
+  @include font($height: 1.62);
+}

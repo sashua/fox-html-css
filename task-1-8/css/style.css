@@ -487,4 +487,41 @@ body {
   transform: translateY(calc(50% + 55px));
 }
 
+.about {
+  padding: 95px 0;
+  text-align: center;
+  background-color: rgba(74, 153, 211, 0.1);
+}
+
+.about__title {
+  margin-bottom: 88px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: #4a99d3;
+}
+
+.about__steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.about__step {
+  max-width: 250px;
+  color: #0f001a;
+}
+
+.about__subtitle {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.about__text {
+  line-height: 1.62;
+}
+
 /*# sourceMappingURL=style.css.map */

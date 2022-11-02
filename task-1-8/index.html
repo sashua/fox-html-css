@@ -15,7 +15,9 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#!">Home</a></li>
-            <li class="nav__item"><a class="nav__link" href="#!">About</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
             <li class="nav__item">
               <a class="nav__link" href="#!">Contact us</a>
             </li>
@@ -124,31 +126,39 @@
       </section>
 
       <!-- About section -->
-      <section class="about">
-        <h3 class="about__title">How it works</h3>
-        <ul class="about steps">
-          <li class="about__step">
-            <svg class="about__icon">
-              <use href=""></use>
-            </svg>
-            <h4 class="about__subtitle">Create an account</h4>
-            <p class="about__text">Lorem ipsum dolor sit amet, consecteteu.</p>
-          </li>
-          <li class="about__step">
-            <svg class="about__icon">
-              <use href=""></use>
-            </svg>
-            <h4 class="about__subtitle">Get authorization</h4>
-            <p class="about__text">Lorem ipsum dolor sit amet, consecteteu.</p>
-          </li>
-          <li class="about__step">
-            <svg class="about__icon">
-              <use href=""></use>
-            </svg>
-            <h4 class="about__subtitle">Enjoy the app</h4>
-            <p class="about__text">Lorem ipsum dolor sit amet, consecteteu.</p>
-          </li>
-        </ul>
+      <section id="about" class="about">
+        <div class="container container--narrow">
+          <h3 class="about__title">How it works</h3>
+          <ul class="about__steps">
+            <li class="about__step">
+              <svg class="about__icon" width="60" height="60">
+                <use href="./assets/images/sprite.svg#icon-login"></use>
+              </svg>
+              <h4 class="about__subtitle">Create an account</h4>
+              <p class="about__text">
+                Lorem ipsum dolor sit amet, consecteteu.
+              </p>
+            </li>
+            <li class="about__step">
+              <svg class="about__icon" width="60" height="60">
+                <use href="./assets/images/sprite.svg#icon-auth"></use>
+              </svg>
+              <h4 class="about__subtitle">Get authorization</h4>
+              <p class="about__text">
+                Lorem ipsum dolor sit amet, consecteteu.
+              </p>
+            </li>
+            <li class="about__step">
+              <svg class="about__icon" width="60" height="60">
+                <use href="./assets/images/sprite.svg#icon-enjoy"></use>
+              </svg>
+              <h4 class="about__subtitle">Enjoy the app</h4>
+              <p class="about__text">
+                Lorem ipsum dolor sit amet, consecteteu.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Testimonials section -->
@@ -225,7 +235,7 @@
             <p class="links title">Quick links</p>
             <ul class="links__list">
               <li><a class="link" href="#!">Sign up</a></li>
-              <li><a class="link" href="#!">About us</a></li>
+              <li><a class="link" href="#about">About us</a></li>
             </ul>
           </div>
           <div class="links">
