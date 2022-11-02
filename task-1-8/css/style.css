@@ -302,7 +302,45 @@ ol {
 
 body {
   font-family: "Objective", sans-serif;
+  color: #260041;
   background-color: #e5e5e5;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  color: #4a99d3;
+}
+
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav__link:hover, .nav__link:focus {
+  color: #4a99d3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 42px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 120px;
 }
 
 /*# sourceMappingURL=style.css.map */

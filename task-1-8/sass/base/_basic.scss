@@ -1,4 +1,5 @@
 body {
-  font-family: $primFont;
+  @include font($family: $primFont);
+  color: $primColor;
   background-color: $primBgColor;
 }

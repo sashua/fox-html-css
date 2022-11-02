@@ -1,0 +1,4 @@
+.logo {
+  @include font($size: 34px, $weight: 700, $height: 1);
+  color: $primAccentColor;
+}

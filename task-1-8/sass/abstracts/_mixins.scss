@@ -7,3 +7,19 @@
       url("#{$dir}/#{$filename}.otf") format("opentype");
   }
 }
+
+@mixin font(
+  $family: null,
+  $style: null,
+  $size: null,
+  $weight: null,
+  $height: null,
+  $spacing: null
+) {
+  font-family: $family;
+  font-style: $style;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
