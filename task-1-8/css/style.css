@@ -285,6 +285,7 @@ a {
 button,
 input {
   padding: 0;
+  color: inherit;
   background-color: transparent;
   border: none;
 }
@@ -323,6 +324,9 @@ body {
   font-weight: 700;
   line-height: 1;
   color: #4a99d3;
+}
+.logo--white {
+  color: #fff;
 }
 
 .nav__list {
@@ -452,6 +456,71 @@ body {
 .slider__button:hover, .slider__button:focus {
   color: #fff;
   background-color: #4a99d3;
+}
+
+.quick-links__title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+.quick-links__title:after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: currentColor;
+}
+
+.quick-links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 34px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.subscribe__caption {
+  max-width: 90%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.44;
+}
+
+.subscribe__wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe__email {
+  flex: 1 1 50%;
+  padding: 16px 10px;
+  font-size: 14px;
+  line-height: 1;
+  color: #0f001a;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.subscribe__email::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.subscribe__submit {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #4a99d3;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.social {
+  display: flex;
+  gap: 25px;
 }
 
 .container {
@@ -656,6 +725,45 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.footer {
+  color: #fff;
+  background-color: #4a99d3;
+}
+
+.footer__container {
+  padding: 0 105px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer__top {
+  padding: 55px 0 30px;
+  border-bottom: 1px solid currentColor;
+}
+
+.footer__bottom {
+  padding: 23px 0;
+}
+.footer__bottom .footer__container {
+  align-items: center;
+}
+
+.footer__links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer__subscribe {
+  flex-basis: 33.333%;
+}
+
+.footer__copy {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

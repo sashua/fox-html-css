@@ -225,86 +225,99 @@
     <!-- Footer section -->
     <footer class="footer">
       <div class="footer__top">
-        <a class="logo" href="index.html">LOGO</a>
+        <div class="container footer__container">
+          <a class="logo logo--white" href="index.html">LOGO</a>
 
-        <!-- Quick links block -->
-        <div class="footer__links">
-          <div class="links">
-            <p class="links title">Quick links</p>
-            <ul class="links__list">
-              <li><a class="link" href="#!">Sign up</a></li>
-              <li><a class="link" href="#about">About us</a></li>
-            </ul>
+          <!-- Quick links -->
+          <div class="footer__links">
+            <div class="quick-links">
+              <p class="quick-links__title">Quick links</p>
+              <ul class="quick-links__list">
+                <li><a class="quick-links__link" href="#!">Sign up</a></li>
+                <li><a class="quick-links__link" href="#about">About us</a></li>
+              </ul>
+            </div>
+            <div class="quick-links">
+              <p class="quick-links__title">Others</p>
+              <ul class="quick-links__list">
+                <li><a class="quick-links__link" href="#!">Users FAQs</a></li>
+                <li><a class="quick-links__link" href="#!">Contact us</a></li>
+                <li><a class="quick-links__link" href="#!">Legal</a></li>
+                <li>
+                  <a class="quick-links__link" href="#!">Privacy policy</a>
+                </li>
+                <li>
+                  <a class="quick-links__link" href="#!"
+                    >Terms and conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="quick-links">
+              <p class="quick-links__title">Products</p>
+              <ul class="quick-links__list">
+                <li><a class="quick-links__link" href="#!">Send</a></li>
+                <li><a class="quick-links__link" href="#!">Receive</a></li>
+                <li><a class="quick-links__link" href="#!">Buy</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="links">
-            <p class="links title">Others</p>
-            <ul class="links__list">
-              <li><a class="link" href="#!">Users FAQs</a></li>
-              <li><a class="link" href="#!">Contact us</a></li>
-              <li><a class="link" href="#!">Legal</a></li>
-              <li><a class="link" href="#!">Privacy policy</a></li>
-              <li><a class="link" href="#!">Terms and conditions</a></li>
-            </ul>
-          </div>
-          <div class="links">
-            <p class="links title">Products</p>
-            <ul class="links__list">
-              <li><a class="link" href="#!">Send</a></li>
-              <li><a class="link" href="#!">Receive</a></li>
-              <li><a class="link" href="#!">Buy</a></li>
-            </ul>
-          </div>
+
+          <!-- Subscribe form -->
+          <form class="subscribe footer__subscribe">
+            <p class="subscribe__caption">
+              Subscribe to our newsletter and be the first to know about our
+              updates
+            </p>
+            <div class="subscribe__wrap">
+              <input
+                class="subscribe__email"
+                type="email"
+                name="email"
+                placeholder="Email address"
+              />
+              <button class="subscribe__submit" type="submit">Subscribe</button>
+            </div>
+          </form>
         </div>
-
-        <!-- Subscribe form -->
-        <form class="subscribe">
-          <p class="subscribe__caption">
-            Subscribe to our newsletter and be the first to know about our
-            updates
-          </p>
-          <input
-            class="subscribe__email"
-            type="email"
-            name="email"
-            placeholder="Email address"
-          />
-          <button class="subscribe__submit" type="submit">Subscribe</button>
-        </form>
       </div>
 
-      <!-- Copyrignt and social links block -->
       <div class="footer__bottom">
-        <p class="footer__copy">Copyright © 2020. All rights reserved.</p>
-        <ul class="social">
-          <li class="social__item">
-            <a class="link" href="#!" target="_blank">
-              <svg class="link__icon">
-                <use href=""></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="#!" target="_blank">
-              <svg class="link__icon">
-                <use href=""></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="#!" target="_blank">
-              <svg class="link__icon">
-                <use href=""></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="link" href="#!" target="_blank">
-              <svg class="link__icon">
-                <use href=""></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="container footer__container">
+          <p class="footer__copy">Copyright © 2020. All rights reserved.</p>
+
+          <!-- Social links -->
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank">
+                <svg width="20" height="16">
+                  <use href="./assets/images/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank">
+                <svg width="16" height="16">
+                  <use href="./assets/images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank">
+                <svg width="16" height="16">
+                  <use href="./assets/images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank">
+                <svg width="16" height="16">
+                  <use href="./assets/images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

@@ -1,0 +1,37 @@
+.subscribe__caption {
+  max-width: 90%;
+  margin-bottom: 20px;
+
+  @include font($size: 18px, $height: 1.44);
+}
+
+.subscribe__wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe__email {
+  flex: 1 1 50%;
+  padding: 16px 10px;
+
+  @include font($size: 14px, $height: 1);
+  color: $secColor;
+
+  background-color: $whiteColor;
+  border-radius: $radiiS;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+}
+
+.subscribe__submit {
+  padding: 16px;
+
+  @include font($weight: 700, $size: 16px, $height: 1);
+  color: $primAccentColor;
+
+  background-color: $whiteColor;
+  border-radius: $radiiS;
+}

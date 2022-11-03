@@ -1,0 +1,38 @@
+.footer {
+  color: $whiteColor;
+  background-color: $primAccentColor;
+}
+
+.footer__container {
+  padding: 0 105px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer__top {
+  padding: 55px 0 30px;
+  border-bottom: 1px solid currentColor;
+}
+
+.footer__bottom {
+  padding: 23px 0;
+
+  .footer__container {
+    align-items: center;
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer__subscribe {
+  flex-basis: 33.333%;
+}
+
+.footer__copy {
+  @include font($weight: 700, $size: 11px, $height: 1);
+}
