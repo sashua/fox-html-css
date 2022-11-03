@@ -1,4 +1,6 @@
 .button {
+  --colorText: currentColor;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +9,20 @@
   min-height: 60px;
   padding: 12px;
 
+  color: $whiteColor;
   background-color: $primAccentColor;
   border-radius: $radiiL;
+
+  &--black {
+    --colorRed: currentColor;
+    --colorGreen: currentColor;
+    --colorBlue: currentColor;
+    --colorYellow: currentColor;
+
+    min-width: 165px;
+    min-height: 55px;
+    padding: 10px;
+
+    background-color: $blackColor;
+  }
 }

@@ -335,14 +335,26 @@ body {
 }
 
 .button {
+  --colorText: currentColor;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 180px;
   min-height: 60px;
   padding: 12px;
+  color: #fff;
   background-color: #4a99d3;
   border-radius: 5px;
+}
+.button--black {
+  --colorRed: currentColor;
+  --colorGreen: currentColor;
+  --colorBlue: currentColor;
+  --colorYellow: currentColor;
+  min-width: 165px;
+  min-height: 55px;
+  padding: 10px;
+  background-color: #000;
 }
 
 .card {
@@ -602,6 +614,48 @@ body {
 .testimonials__slider {
   margin-left: auto;
   max-width: 420px;
+}
+
+.download {
+  padding: 120px 0;
+  text-align: center;
+  background: url(../assets/images/squares-3.svg) no-repeat bottom -50px left -65px/255px, url(../assets/images/squares-4.svg) no-repeat bottom -50px right -65px/255px;
+}
+
+.download__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding-left: 100px;
+}
+
+.hero__image {
+  flex-basis: 516px;
+}
+
+.download__content {
+  flex-basis: 450px;
+}
+
+.download__title {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f001a;
+}
+
+.download__text {
+  margin-bottom: 55px;
+  line-height: 1.5;
+  opacity: 0.5;
+}
+
+.download__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

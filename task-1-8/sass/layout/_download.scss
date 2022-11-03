@@ -1,0 +1,46 @@
+.download {
+  padding: 120px 0;
+
+  text-align: center;
+
+  background: url(#{$squaresImg + "-3.svg"}) no-repeat bottom -50px left -65px /
+      255px,
+    url(#{$squaresImg + "-4.svg"}) no-repeat bottom -50px right -65px / 255px;
+}
+
+.download__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+
+  padding-left: 100px;
+}
+
+.hero__image {
+  flex-basis: 516px;
+}
+
+.download__content {
+  flex-basis: 450px;
+}
+
+.download__title {
+  margin-bottom: 15px;
+
+  @include font($weight: 700, $size: 25px, $height: 1);
+  color: $secColor;
+}
+
+.download__text {
+  margin-bottom: 55px;
+
+  @include font($height: 1.5);
+  opacity: 0.5;
+}
+
+.download__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
