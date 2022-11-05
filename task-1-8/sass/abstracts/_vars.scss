@@ -1,6 +1,8 @@
+// === Fonts ===
 $fontsDir: "../../assets/fonts";
 $primFont: "Objective", sans-serif;
 
+// === Colors ===
 $blackColor: #000;
 $whiteColor: #fff;
 
@@ -14,6 +16,10 @@ $primBgColor: $whiteColor;
 $secBgColor: rgba(74, 153, 211, 0.1);
 $heroBg: linear-gradient(to bottom, $primAccentColor -300%, $primBgColor 75%);
 
+$primHoverColor: $primAccentColor;
+$secHoverColor: $secAccentColor;
+
+// === Other ===
 $dotsImg: "../assets/images/dots.svg";
 $squaresImg: "../assets/images/squares";
 $quotesImg: "../assets/images/quotes.svg";
@@ -22,8 +28,33 @@ $userImg: "../assets/images/user.png";
 $heroShadow: 0px 4px 16px rgba(75, 0, 129, 0.1);
 $cardShadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
 $btnShadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+$menuShadow: -4px 0 16px rgba(0, 0, 0, 0.5);
 
 $radiiS: 3px;
 $radiiM: 4px;
 $radiiL: 5px;
 $radiiXL: 10px;
+
+$transitionProps: 0.25s;
+
+// === Container sizes ===
+$containerContentWidth: 950;
+$containerPadding: 15;
+$containerWidth: $containerContentWidth + 2 * $containerPadding;
+
+$heroContentWidth: 1110;
+$heroContainerWidth: 2 * $heroContentWidth - $containerWidth;
+$heroPaddingLeft: $heroContentWidth - $containerContentWidth - $containerPadding;
+
+$downloadContentWidth: 1025;
+$downloadContainerWidth: 2 * $downloadContentWidth - $containerWidth;
+$downloadPaddingRight: $downloadContentWidth - $containerContentWidth -
+  $containerPadding;
+
+$footerContentWidth: 1190;
+$footerContainerWidth: $footerContentWidth + 2 * $containerPadding;
+
+// === Media breaks ===
+$tabletBreak: 768px;
+$desktopBreak: $containerWidth + px;
+$desktopLargeBreak: 1440px;

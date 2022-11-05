@@ -1,35 +1,80 @@
 .mission {
-  padding: 150px 0;
+  padding: 60px 0;
 
-  background: url($dotsImg) no-repeat top 85px right 12.5% / 155px,
-    url($dotsImg) no-repeat bottom 75px right 12.5% / 155px,
-    url($dotsImg) no-repeat center left 16.5% / 155px,
-    url(#{$squaresImg + "-1.svg"}) no-repeat top right -65px / 255px,
-    url(#{$squaresImg + "-2.svg"}) no-repeat bottom left -65px / 255px;
+  @include media-tablet {
+    padding: 100px 0;
+
+    background: url($dotsImg) no-repeat top 85px left calc(50% + 475px) / 155px,
+      url($dotsImg) no-repeat center left calc(50% - 425px) / 155px,
+      url($dotsImg) no-repeat bottom 75px left calc(50% + 475px) / 155px,
+      url(#{$squaresImg + "-2.svg"}) no-repeat bottom left -65px / 175px;
+  }
+
+  @include media-desktop {
+    padding: 150px 0;
+  }
+
+  @include media-desktop-l {
+    background: url($dotsImg) no-repeat top 85px left calc(50% + 475px) / 155px,
+      url($dotsImg) no-repeat center left calc(50% - 425px) / 155px,
+      url($dotsImg) no-repeat bottom 75px left calc(50% + 475px) / 155px,
+      url(#{$squaresImg + "-1.svg"}) no-repeat top right -65px / 255px,
+      url(#{$squaresImg + "-2.svg"}) no-repeat bottom left -65px / 255px;
+  }
 }
 
-.mission__content {
-  position: relative;
-  top: 0;
-  left: 0;
+.mission__container {
+  @include media-tablet {
+    position: relative;
+  }
 }
 
 .mission__title {
-  position: absolute;
-  top: 0;
-  max-width: 395px;
+  margin-bottom: 1.5em;
 
-  @include font($weight: 500, $size: 36px, $height: 1.28, $spacing: 0.05em);
+  @include font($weight: 500, $size: 1.75rem, $height: 1.28, $spacing: 0.05em);
+  text-align: center;
+
+  @include media-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    padding-left: $containerPadding + px;
+
+    @include font($size: 2rem);
+    text-align: left;
+  }
+
+  @include media-desktop {
+    width: 40%;
+
+    @include font($size: 2.25rem);
+  }
 }
 
 .mission__cards {
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  gap: 110px;
-  padding-top: 12px;
+  flex-flow: column;
+  align-items: center;
+  row-gap: 55px;
+
+  @include media-tablet {
+    flex-flow: row-reverse wrap;
+    row-gap: 110px;
+    column-gap: 10%;
+    max-width: 865px;
+    margin-left: auto;
+    padding-top: 15px;
+  }
 }
 
-.mission__card:nth-child(even) {
-  transform: translateY(calc(50% + 55px));
+.mission__card {
+  flex: 0 0 45%;
+
+  &:nth-child(even) {
+    @include media-tablet {
+      transform: translateY(calc(50% + 55px));
+    }
+  }
 }

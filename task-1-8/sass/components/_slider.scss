@@ -1,5 +1,5 @@
 .slider__pages {
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .slider__page {
@@ -28,13 +28,20 @@
 .slider__controls {
   display: flex;
   max-width: 160px;
-  margin-left: auto;
+  margin: 0 auto;
   box-shadow: $btnShadow;
+
+  @include media-tablet {
+    margin-left: auto;
+    margin-right: unset;
+  }
 }
 
 .slider__button {
   padding: 20px;
   color: $primAccentColor;
+
+  transition: color $transitionProps, background-color $transitionProps;
 
   &:first-child {
     border-top-left-radius: $radiiM;
@@ -49,6 +56,10 @@
   &:hover,
   &:focus {
     color: $whiteColor;
-    background-color: $primAccentColor;
+    background-color: $primHoverColor;
+  }
+
+  &:disabled {
+    color: $secAccentColor;
   }
 }

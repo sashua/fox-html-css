@@ -1,39 +1,87 @@
 .hero {
-  padding: 158px 0 76px;
-
+  padding: 120px 0 60px;
   background: $heroBg;
   box-shadow: $heroShadow;
+
+  @include media-tablet {
+    padding: 160px 0 75px;
+  }
 }
 
 .hero__container {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+  max-width: $heroContainerWidth + px;
+  @include resp-prop(
+    $propName: "padding-left",
+    $maxValue: $heroPaddingLeft,
+    $minValue: $containerPadding,
+    $maxViewWidth: $heroContainerWidth,
+    $minViewWidth: $containerWidth
+  );
 
-  padding-right: 15px;
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+  }
 }
 
 .hero__content {
-  flex-basis: 636px;
+  text-align: center;
+
+  @include media-tablet {
+    flex: 55%;
+    text-align: left;
+  }
+}
+
+.hero__image {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    flex: 40%;
+    max-width: 440px;
+  }
 }
 
 .hero__title {
-  margin-bottom: 14px;
+  margin-bottom: 0.9em;
 
-  @include font($weight: 500, $size: 50px, $height: 1.4, $spacing: 0.02em);
+  @include font($weight: 500, $size: 2rem, $height: 1.4, $spacing: 0.02em);
+
+  @include media-tablet {
+    margin-bottom: 0.3em;
+
+    @include font($size: 2.5rem);
+  }
+
+  @include media-desktop {
+    @include font($size: 3.125rem);
+  }
 }
 
 .hero__text {
-  margin-bottom: 60px;
+  margin-bottom: 3em;
 
-  @include font($size: 20px, $height: 1.8);
+  @include font($height: 1.8);
+
+  @include media-tablet {
+    @include font($size: 1.125rem);
+  }
+
+  @include media-desktop {
+    @include font($size: 1.25rem);
+  }
 }
 
 .hero__buttons {
   display: flex;
+  flex-flow: wrap;
+  justify-content: center;
   gap: 20px;
-}
 
-.hero__image {
-  flex-basis: 440px;
+  @include media-tablet {
+    justify-content: start;
+  }
 }

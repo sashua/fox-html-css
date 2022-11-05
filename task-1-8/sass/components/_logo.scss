@@ -1,8 +1,4 @@
 .logo {
   @include font($weight: 700, $size: 34px, $height: 1);
-  color: $primAccentColor;
-
-  &--white {
-    color: $whiteColor;
-  }
+  color: currentColor;
 }

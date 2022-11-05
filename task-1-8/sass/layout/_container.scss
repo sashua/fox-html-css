@@ -1,9 +1,5 @@
 .container {
-  max-width: 1300px;
+  max-width: $containerWidth + px;
   margin: 0 auto;
-  padding: 0 15px;
-
-  &--narrow {
-    padding: 0 175px;
-  }
+  padding: 0 ($containerPadding + px);
 }

@@ -1,6 +1,7 @@
 .quick-links__title {
   display: inline-block;
-  @include font($weight: 500, $size: 18px, $height: 1);
+  margin-bottom: 1.8em;
+  @include font($weight: 500, $size: 1.125rem, $height: 1);
 
   &:after {
     content: "";
@@ -15,9 +16,16 @@
 .quick-links__list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 1.3em;
 
-  margin-top: 34px;
+  @include font($size: 0.875rem, $height: 1);
+}
 
-  @include font($size: 14px, $height: 1);
+.quick-links__link {
+  transition: color $transitionProps;
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+  }
 }

@@ -1,42 +1,60 @@
 .card {
   max-width: 380px;
-  padding: 48px;
+  padding: 24px;
 
   background-color: $primBgColor;
   box-shadow: $cardShadow;
   border-radius: $radiiXL;
+
+  @include media-tablet {
+    padding: 36px;
+  }
+
+  @include media-desktop {
+    padding: 48px;
+  }
 }
 
 .card__img-wrap {
-  position: relative;
+  margin-bottom: 24px;
 
-  height: 132px;
-  margin-bottom: 56px;
-}
+  @include media-tablet {
+    margin-bottom: 36px;
+  }
 
-.card__img {
-  position: absolute;
-  bottom: 0;
+  @include media-desktop {
+    margin-bottom: 56px;
+  }
 }
 
 .card__title {
-  margin-bottom: 16px;
+  margin-bottom: 0.8em;
 
-  @include font($weight: 500, $size: 20px, $height: 1.5, $spacing: 0.02em);
+  @include font($weight: 500, $size: 1.125rem, $height: 1.5, $spacing: 0.02em);
   color: $secColor;
+
+  @include media-desktop {
+    @include font($size: 1.25rem);
+  }
 }
 
 .card__text {
   $line-height: 1.62;
 
   height: 1em * 4 * $line-height;
-  margin-bottom: 52px;
+  margin-bottom: 1.75em;
 
-  @include font($height: $line-height);
+  @include font($size: 0.875rem, $height: $line-height);
   color: $secColor;
 
   opacity: 0.6;
   overflow: hidden;
+
+  @include media-tablet {
+    margin-bottom: 3.25em;
+
+    @include font($size: 1rem);
+  }
 }
 
 .card__link {
@@ -46,4 +64,19 @@
 
   @include font($weight: 500, $size: 14px, $spacing: 0.05em);
   color: $primAccentColor;
+
+  transition: color $secHoverColor;
+
+  svg {
+    transition: transform $transitionProps;
+  }
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+
+    svg {
+      transform: translateX(50%);
+    }
+  }
 }

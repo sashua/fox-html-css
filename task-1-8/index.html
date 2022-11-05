@@ -9,17 +9,24 @@
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
-      <div class="container container--narrow header__container">
+    <header id="home" class="header">
+      <div class="container header__container">
         <a class="logo" href="index.html">LOGO</a>
-        <nav class="nav">
+        <button class="header__burger" type="button">
+          <svg width="40" height="40">
+            <use href="./assets/images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <nav class="nav header__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="#!">Home</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#home">Home</a>
+            </li>
             <li class="nav__item">
               <a class="nav__link" href="#about">About</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#!">Contact us</a>
+              <a class="nav__link" href="#contact-us">Contact us</a>
             </li>
           </ul>
         </nav>
@@ -29,7 +36,7 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container container--narrow hero__container">
+        <div class="container hero__container">
           <div class="hero__content">
             <h1 class="hero__title">New E-commerce App best for You</h1>
             <p class="hero__text">
@@ -58,76 +65,70 @@
 
       <!-- Mission section -->
       <section class="mission">
-        <div class="container container--narrow">
-          <div class="mission__content">
-            <h2 class="mission__title">
-              What we do to help our customers in digital era.
-            </h2>
-            <ul class="mission__cards">
-              <li class="card mission__card">
-                <div class="card__img-wrap">
-                  <img
-                    class="card__img"
-                    src="./assets/images/send.svg"
-                    alt=""
-                  />
-                </div>
-                <h4 class="card__title">Send</h4>
-                <p class="card__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a class="card__link" href="#!"
-                  >Learn more
-                  <svg width="24" height="24">
-                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="card mission__card">
-                <div class="card__img-wrap">
-                  <img
-                    class="card__img"
-                    src="./assets/images/receive.svg"
-                    alt=""
-                  />
-                </div>
-                <h4 class="card__title">Receive</h4>
-                <p class="card__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a class="card__link" href="#!"
-                  >Learn more
-                  <svg width="24" height="24">
-                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="card mission__card">
-                <div class="card__img-wrap">
-                  <img class="card__img" src="./assets/images/buy.svg" alt="" />
-                </div>
-                <h4 class="card__title">Buy</h4>
-                <p class="card__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a class="card__link" href="#!"
-                  >Learn more
-                  <svg width="24" height="24">
-                    <use href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="container mission__container">
+          <h2 class="mission__title">
+            What we do to help our customers in digital era.
+          </h2>
+          <ul class="mission__cards">
+            <li class="card mission__card">
+              <div class="card__img-wrap">
+                <img class="card__img" src="./assets/images/send.svg" alt="" />
+              </div>
+              <h4 class="card__title">Send</h4>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a class="card__link" href="#!"
+                >Learn more
+                <svg width="24" height="24">
+                  <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="card mission__card">
+              <div class="card__img-wrap">
+                <img
+                  class="card__img"
+                  src="./assets/images/receive.svg"
+                  alt=""
+                />
+              </div>
+              <h4 class="card__title">Receive</h4>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a class="card__link" href="#!"
+                >Learn more
+                <svg width="24" height="24">
+                  <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="card mission__card">
+              <div class="card__img-wrap">
+                <img class="card__img" src="./assets/images/buy.svg" alt="" />
+              </div>
+              <h4 class="card__title">Buy</h4>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a class="card__link" href="#!"
+                >Learn more
+                <svg width="24" height="24">
+                  <use href="./assets/images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- About section -->
       <section id="about" class="about">
-        <div class="container container--narrow">
+        <div class="container about__container">
           <h3 class="about__title">How it works</h3>
           <ul class="about__steps">
             <li class="about__step">
@@ -163,7 +164,7 @@
 
       <!-- Testimonials section -->
       <section class="testimonials">
-        <div class="container container--narrow">
+        <div class="container testimonials__container">
           <h3 class="testimonials__title">What our client say</h3>
           <div class="slider testimonials__slider">
             <ul class="slider__pages">
@@ -194,8 +195,8 @@
 
       <!-- Download section -->
       <section class="download">
-        <div class="container container--narrow download__container">
-          <div class="gownload__image">
+        <div class="container download__container">
+          <div class="download__image">
             <img src="./assets/images/download-phones.png" alt="App mockups" />
           </div>
           <div class="download__content">
@@ -223,7 +224,7 @@
     </main>
 
     <!-- Footer section -->
-    <footer class="footer">
+    <footer id="contact-us" class="footer">
       <div class="footer__top">
         <div class="container footer__container">
           <a class="logo logo--white" href="index.html">LOGO</a>
@@ -264,7 +265,7 @@
           </div>
 
           <!-- Subscribe form -->
-          <form class="subscribe footer__subscribe">
+          <form class="subscribe footer__subscribe" autocomplete="off">
             <p class="subscribe__caption">
               Subscribe to our newsletter and be the first to know about our
               updates

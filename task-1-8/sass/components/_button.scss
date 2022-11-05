@@ -13,6 +13,8 @@
   background-color: $primAccentColor;
   border-radius: $radiiL;
 
+  transition: background-color $transitionProps;
+
   &--black {
     --colorRed: currentColor;
     --colorGreen: currentColor;
@@ -24,5 +26,10 @@
     padding: 10px;
 
     background-color: $blackColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $secHoverColor;
   }
 }

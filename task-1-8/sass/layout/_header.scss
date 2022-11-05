@@ -1,14 +1,56 @@
 .header {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 8px 0;
 
-  padding: 42px 0;
+  color: $primAccentColor;
+
+  @include media-tablet {
+    padding: 42px 0;
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header__burger {
+  display: block;
+  color: $primColor;
+
+  transition: color $transitionProps;
+
+  @include media-tablet {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primHoverColor;
+  }
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+
+  transform: translateX(110%);
+  transition: transform $transitionProps;
+
+  .header__burger:focus + & {
+    transform: translateX(0);
+  }
+
+  @include media-tablet {
+    position: static;
+    transform: translateX(0);
+  }
 }

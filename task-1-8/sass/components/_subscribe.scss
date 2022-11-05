@@ -1,20 +1,31 @@
 .subscribe__caption {
   max-width: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 1.1em;
 
-  @include font($size: 18px, $height: 1.44);
+  @include font($size: 1.125rem, $height: 1.4);
+  text-align: center;
+
+  @include media-tablet {
+    text-align: left;
+  }
 }
 
 .subscribe__wrap {
   display: flex;
+  flex-flow: wrap;
+  justify-content: center;
   gap: 10px;
+
+  @include media-desktop {
+    justify-content: end;
+  }
 }
 
 .subscribe__email {
-  flex: 1 1 50%;
-  padding: 16px 10px;
+  flex: 250px;
+  padding: 1em 0.625em;
 
-  @include font($size: 14px, $height: 1);
+  @include font($height: 1);
   color: $secColor;
 
   background-color: $whiteColor;
@@ -24,14 +35,26 @@
     color: inherit;
     opacity: 0.5;
   }
+
+  &:focus {
+    outline-color: $secAccentColor;
+  }
 }
 
 .subscribe__submit {
-  padding: 16px;
+  padding: 1em;
 
-  @include font($weight: 700, $size: 16px, $height: 1);
+  @include font($weight: 700, $height: 1);
   color: $primAccentColor;
 
   background-color: $whiteColor;
   border-radius: $radiiS;
+
+  transition: color $transitionProps, background-color $transitionProps;
+
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    background-color: $secHoverColor;
+  }
 }
