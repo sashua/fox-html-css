@@ -1,6 +1,5 @@
 .download {
   padding: 90px 0 60px;
-
   text-align: center;
 
   @include media-tablet {
@@ -13,7 +12,6 @@
 
   @include media-desktop {
     padding: 120px 0;
-
     background-size: 255px, 255px;
   }
 }

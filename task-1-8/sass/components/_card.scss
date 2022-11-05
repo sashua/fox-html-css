@@ -1,14 +1,10 @@
 .card {
   max-width: 380px;
-  padding: 24px;
+  padding: 36px;
 
   background-color: $primBgColor;
   box-shadow: $cardShadow;
   border-radius: $radiiXL;
-
-  @include media-tablet {
-    padding: 36px;
-  }
 
   @include media-desktop {
     padding: 48px;
@@ -16,6 +12,7 @@
 }
 
 .card__img-wrap {
+  position: relative;
   margin-bottom: 24px;
 
   @include media-tablet {
@@ -25,6 +22,16 @@
   @include media-desktop {
     margin-bottom: 56px;
   }
+}
+
+.card__img--flying {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  filter: drop-shadow($iconShadow);
+  animation: fly 5s ease-in-out infinite alternate;
 }
 
 .card__title {
@@ -78,5 +85,15 @@
     svg {
       transform: translateX(50%);
     }
+  }
+}
+
+// === Animations ===
+@keyframes fly {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
   }
 }

@@ -18,6 +18,7 @@ $heroBg: linear-gradient(to bottom, $primAccentColor -300%, $primBgColor 75%);
 
 $primHoverColor: $primAccentColor;
 $secHoverColor: $secAccentColor;
+$disabledColor: #878787;
 
 // === Other ===
 $dotsImg: "../assets/images/dots.svg";
@@ -28,7 +29,8 @@ $userImg: "../assets/images/user.png";
 $heroShadow: 0px 4px 16px rgba(75, 0, 129, 0.1);
 $cardShadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
 $btnShadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-$menuShadow: -4px 0 16px rgba(0, 0, 0, 0.5);
+$menuShadow: -4px 0 16px rgba(0, 0, 0, 0.4);
+$iconShadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 
 $radiiS: 3px;
 $radiiM: 4px;

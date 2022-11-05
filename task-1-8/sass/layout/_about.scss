@@ -42,7 +42,6 @@
 
 .about__step {
   max-width: 260px;
-
   color: $secColor;
 }
 
@@ -52,7 +51,6 @@
 
 .about__subtitle {
   margin-bottom: 0.55em;
-
   @include font($weight: 500, $size: 1.125rem, $height: 1);
 }
 

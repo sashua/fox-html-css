@@ -1,3 +1,4 @@
+// === Fonts start ===
 @mixin font-face($family, $dir, $filename, $weight: 400, $style: normal) {
   @font-face {
     font-family: $family;
@@ -23,7 +24,9 @@
   line-height: $height;
   letter-spacing: $spacing;
 }
+// --- Fonts end ---
 
+// === Responsible property start ===
 @mixin resp-prop(
   $propName,
   $maxValue,
@@ -48,7 +51,9 @@
     #{$propName}: #{$maxValue + px};
   }
 }
+// --- Responsible property end ---
 
+// === Media queries start ===
 @mixin media-tablet {
   @media screen and (min-width: $tabletBreak) {
     @content;
@@ -66,3 +71,4 @@
     @content;
   }
 }
+// --- Media queries end ---

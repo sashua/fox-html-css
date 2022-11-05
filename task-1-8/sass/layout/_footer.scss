@@ -4,9 +4,8 @@
 }
 
 .footer__container {
-  max-width: $footerContainerWidth + px;
-
   display: flex;
+  max-width: $footerContainerWidth + px;
 }
 
 .footer__top {

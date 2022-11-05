@@ -12,7 +12,7 @@
     <header id="home" class="header">
       <div class="container header__container">
         <a class="logo" href="index.html">LOGO</a>
-        <button class="header__burger" type="button">
+        <button class="header__burger" type="button" aria-label="Open menu">
           <svg width="40" height="40">
             <use href="./assets/images/sprite.svg#icon-menu"></use>
           </svg>
@@ -45,12 +45,22 @@
               quis. Cursus commodo, eget urna, sapien amet.
             </p>
             <div class="hero__buttons">
-              <a class="button" href="#!" target="_blank">
+              <a
+                class="button"
+                href="#!"
+                target="_blank"
+                aria-label="Get it on Google Play"
+              >
                 <svg class="button__svg" width="136" height="36">
                   <use href="./assets/images/sprite.svg#icon-google-play"></use>
                 </svg>
               </a>
-              <a class="button" href="#!" target="_blank">
+              <a
+                class="button"
+                href="#!"
+                target="_blank"
+                aria-label="Download on the App Store"
+              >
                 <svg class="button__svg" width="136" height="36">
                   <use href="./assets/images/sprite.svg#icon-app-store"></use>
                 </svg>
@@ -58,7 +68,10 @@
             </div>
           </div>
           <div class="hero__image">
-            <img src="./assets/images/hero-phones.png" alt="App mockups" />
+            <img
+              src="./assets/images/hero-phones.png"
+              alt="Two phones with app mockups"
+            />
           </div>
         </div>
       </section>
@@ -72,7 +85,16 @@
           <ul class="mission__cards">
             <li class="card mission__card">
               <div class="card__img-wrap">
-                <img class="card__img" src="./assets/images/send.svg" alt="" />
+                <img
+                  class="card__img--flying"
+                  src="./assets/images/send-icons.svg"
+                  alt="Flying stuff"
+                />
+                <img
+                  class="card__img"
+                  src="./assets/images/send.svg"
+                  alt="Redhead dude"
+                />
               </div>
               <h4 class="card__title">Send</h4>
               <p class="card__text">
@@ -91,7 +113,7 @@
                 <img
                   class="card__img"
                   src="./assets/images/receive.svg"
-                  alt=""
+                  alt="Brunette guy"
                 />
               </div>
               <h4 class="card__title">Receive</h4>
@@ -108,7 +130,11 @@
             </li>
             <li class="card mission__card">
               <div class="card__img-wrap">
-                <img class="card__img" src="./assets/images/buy.svg" alt="" />
+                <img
+                  class="card__img"
+                  src="./assets/images/buy.svg"
+                  alt="Girl with a laptop"
+                />
               </div>
               <h4 class="card__title">Buy</h4>
               <p class="card__text">
@@ -167,6 +193,20 @@
         <div class="container testimonials__container">
           <h3 class="testimonials__title">What our client say</h3>
           <div class="slider testimonials__slider">
+            <input
+              id="slide1"
+              class="slider__trigger"
+              type="radio"
+              name="slide"
+              checked
+            />
+            <input
+              id="slide2"
+              class="slider__trigger"
+              type="radio"
+              name="slide"
+            />
+
             <ul class="slider__pages">
               <li class="slider__page">
                 <p class="slider__text">
@@ -176,18 +216,36 @@
                 </p>
                 <p class="slider__username">Angel Paulina</p>
               </li>
+              <li class="slider__page">
+                <p class="slider__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Reprehenderit labore eligendi laborum temporibus atque ipsa
+                  aliquam eaque blanditiis alias inventore eum magni natus
+                  cumque ipsam numquam ex fuga accusamus, eos sed.
+                </p>
+                <p class="slider__username">Peter Parker</p>
+              </li>
             </ul>
+
             <div class="slider__controls">
-              <button class="slider__button">
+              <label
+                for="slide1"
+                class="slider__button"
+                aria-label="Previous feedback"
+              >
                 <svg width="40" height="40">
                   <use href="./assets/images/sprite.svg#icon-left"></use>
                 </svg>
-              </button>
-              <button class="slider__button">
+              </label>
+              <label
+                for="slide2"
+                class="slider__button"
+                aria-label="Next feedback"
+              >
                 <svg width="40" height="40">
                   <use href="./assets/images/sprite.svg#icon-right"></use>
                 </svg>
-              </button>
+              </label>
             </div>
           </div>
         </div>
@@ -197,7 +255,10 @@
       <section class="download">
         <div class="container download__container">
           <div class="download__image">
-            <img src="./assets/images/download-phones.png" alt="App mockups" />
+            <img
+              src="./assets/images/download-phones.png"
+              alt="Three phones with app mockups"
+            />
           </div>
           <div class="download__content">
             <h3 class="download__title">Download app to enjoy more!</h3>
@@ -207,12 +268,22 @@
               volutpat hac adipiscing tincidunt pretium.
             </p>
             <div class="download__buttons">
-              <a class="button button--black" href="#!" target="_blank">
+              <a
+                class="button button--black"
+                href="#!"
+                target="_blank"
+                aria-label="Get it on Google Play"
+              >
                 <svg class="button__svg" width="136" height="36">
                   <use href="./assets/images/sprite.svg#icon-google-play"></use>
                 </svg>
               </a>
-              <a class="button button--black" href="#!" target="_blank">
+              <a
+                class="button button--black"
+                href="#!"
+                target="_blank"
+                aria-label="Download on the App Store"
+              >
                 <svg class="button__svg" width="136" height="36">
                   <use href="./assets/images/sprite.svg#icon-app-store"></use>
                 </svg>
@@ -227,7 +298,7 @@
     <footer id="contact-us" class="footer">
       <div class="footer__top">
         <div class="container footer__container">
-          <a class="logo logo--white" href="index.html">LOGO</a>
+          <a class="logo" href="#home">LOGO</a>
 
           <!-- Quick links -->
           <div class="footer__links">
@@ -290,28 +361,48 @@
           <!-- Social links -->
           <ul class="social">
             <li class="social__item">
-              <a class="social__link" href="#!" target="_blank">
+              <a
+                class="social__link"
+                href="#!"
+                target="_blank"
+                aria-label="Youtube"
+              >
                 <svg width="20" height="16">
                   <use href="./assets/images/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#!" target="_blank">
+              <a
+                class="social__link"
+                href="#!"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <svg width="16" height="16">
                   <use href="./assets/images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#!" target="_blank">
+              <a
+                class="social__link"
+                href="#!"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <svg width="16" height="16">
                   <use href="./assets/images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#!" target="_blank">
+              <a
+                class="social__link"
+                href="#!"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <svg width="16" height="16">
                   <use href="./assets/images/sprite.svg#icon-twitter"></use>
                 </svg>

@@ -11,6 +11,7 @@
       position: absolute;
       top: 140px;
       left: 0;
+
       display: block;
       width: 47.5%;
       height: 420px;
@@ -48,12 +49,11 @@
 }
 
 .testimonials__slider {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 
   @include media-tablet {
     width: 50%;
-
     margin-left: auto;
     margin-right: unset;
   }

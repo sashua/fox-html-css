@@ -30,7 +30,7 @@
 }
 
 .mission__title {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 
   @include font($weight: 500, $size: 1.75rem, $height: 1.28, $spacing: 0.05em);
   text-align: center;
@@ -48,7 +48,6 @@
 
   @include media-desktop {
     width: 40%;
-
     @include font($size: 2.25rem);
   }
 }
