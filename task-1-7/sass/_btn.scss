@@ -1,0 +1,26 @@
+.btn {
+  filter: drop-shadow($buttonShadow);
+
+  &--prev,
+  &--next {
+    @include absoluteAllSpace;
+
+    visibility: hidden;
+    background: url($buttonPrevImage) left 20% center / 20% no-repeat;
+  }
+  &--next {
+    background: url($buttonNextImage) right 20% center / 20% no-repeat;
+  }
+
+  &--progress {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid $buttonColor;
+    transition: background-color $animationHover;
+
+    &:hover {
+      background-color: $buttonColor;
+    }
+  }
+}

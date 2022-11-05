@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1.7 - Carousel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=IBM+Plex+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Task 1.7 - Carousel</h1>
+    <div class="carousel">
+      <input
+        id="slide1"
+        class="carousel__trigger"
+        type="radio"
+        name="slide"
+        checked
+      />
+      <input id="slide2" class="carousel__trigger" type="radio" name="slide" />
+      <input id="slide3" class="carousel__trigger" type="radio" name="slide" />
+
+      <ul class="carousel__slides">
+        <li class="slide slide--material carousel__slide">
+          <div class="slide__content">
+            <h2 class="slide__title">Material Design</h2>
+            <p class="slide__text">
+              Material 3 is the latest version of Google’s open-source design
+              system. Design and build beautiful, usable products with Material
+              3.
+            </p>
+          </div>
+        </li>
+
+        <li class="slide slide--carbon carousel__slide">
+          <div class="slide__content">
+            <h2 class="slide__title">Carbon Design</h2>
+            <p class="slide__text">
+              Carbon v11 is IBM’s open source design system for products and
+              digital experiences. With the IBM Design Language as its
+              foundation, the system consists of working code, design tools and
+              resources, human interface guidelines, and a vibrant community of
+              contributors.
+            </p>
+          </div>
+        </li>
+
+        <li class="slide slide--lightning carousel__slide">
+          <div class="slide__content">
+            <h2 class="slide__title">Lightning Design</h2>
+            <p class="slide__text">
+              The Salesforce Lightning Design System includes the resources to
+              create user interfaces consistent with the Salesforce Lightning
+              principles, design language, and best practices. Rather than
+              focusing on pixels, developers can focus on application logic,
+              while designers can focus on user experience, interactions, and
+              flows.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="carousel__controls carousel__controls--prev">
+        <label for="slide3" class="btn btn--prev carousel__btn"></label>
+        <label for="slide1" class="btn btn--prev carousel__btn"></label>
+        <label for="slide2" class="btn btn--prev carousel__btn"></label>
+      </div>
+
+      <div class="carousel__controls carousel__controls--next">
+        <label for="slide2" class="btn btn--next carousel__btn"></label>
+        <label for="slide3" class="btn btn--next carousel__btn"></label>
+        <label for="slide1" class="btn btn--next carousel__btn"></label>
+      </div>
+
+      <div class="carousel__controls carousel__controls--progress">
+        <label for="slide1" class="btn btn--progress carousel__btn"></label>
+        <label for="slide2" class="btn btn--progress carousel__btn"></label>
+        <label for="slide3" class="btn btn--progress carousel__btn"></label>
+      </div>
+    </div>
+  </body>
+</html>

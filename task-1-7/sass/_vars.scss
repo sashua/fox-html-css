@@ -1,0 +1,26 @@
+$fallbackBgColor: #be95c4;
+
+$shadowColor: rgba(0, 0, 0, 0.75);
+
+$buttonColor: #fff;
+$buttonShadow: 0.35rem 0.35rem 0.45rem $shadowColor;
+$buttonPrevImage: "../assets/left.svg";
+$buttonNextImage: "../assets/right.svg";
+
+$animationHover: 0.25s;
+$animationSlide: 0.75s;
+$animationTitle: 0.5s 0.5s;
+$animationText: 0.5s 0.75s;
+
+// Slide themes styles
+$materialFont: "Roboto", sans-serif;
+$materialColor: #1f1f1f;
+$materialImage: url("../assets/material.jpg");
+
+$carbonFont: "IBM Plex Sans", sans-serif;
+$carbonColor: #161616;
+$carbonImage: url("../assets/carbon.jpg");
+
+$lightningFont: "Abel", sans-serif;
+$lightningColor: #fff;
+$lightningImage: url("../assets/lightning.webp");

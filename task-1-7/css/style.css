@@ -1,0 +1,253 @@
+.carousel__trigger, h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  filter: drop-shadow(0.35rem 0.35rem 0.45rem rgba(0, 0, 0, 0.75));
+}
+.btn--prev, .btn--next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  background: url("../assets/left.svg") left 20% center/20% no-repeat;
+}
+.btn--next {
+  background: url("../assets/right.svg") right 20% center/20% no-repeat;
+}
+.btn--progress {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+  transition: background-color 0.25s;
+}
+.btn--progress:hover {
+  background-color: #fff;
+}
+
+.slide {
+  overflow: hidden;
+  background: #be95c4 top/cover;
+}
+.slide .slide__content {
+  position: absolute;
+}
+.slide .slide__title {
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+}
+.slide .slide__text {
+  opacity: 0;
+  transition: opacity 0.5s 0.75s, transform 0.5s 0.75s;
+}
+.slide--material {
+  font-family: "Roboto", sans-serif;
+  color: #1f1f1f;
+  background-image: url("../assets/material.jpg");
+}
+.slide--material .slide__content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 48em;
+  text-align: center;
+}
+.slide--material .slide__title {
+  margin-bottom: 0.25em;
+  font-size: 6rem;
+  transform: translateY(-100%);
+}
+.slide--material .slide__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  transform: translateY(100%);
+}
+.slide--carbon {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #161616;
+  background-image: url("../assets/carbon.jpg");
+}
+.slide--carbon .slide__content {
+  bottom: 0;
+  right: 5%;
+  max-width: 24em;
+  padding: 2em;
+  background-color: #ffffff;
+}
+.slide--carbon .slide__title {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  transform: translateY(100%);
+}
+.slide--carbon .slide__text {
+  font-size: 1rem;
+  line-height: 1.25;
+  transform: translateY(100%);
+}
+.slide--lightning {
+  font-family: "Abel", sans-serif;
+  color: #fff;
+  background-image: url("../assets/lightning.webp");
+}
+.slide--lightning .slide__content {
+  top: 10%;
+  left: 5%;
+  max-width: 48em;
+}
+.slide--lightning .slide__title {
+  margin-bottom: 0.5em;
+  font-size: 4rem;
+  transform: translateX(25%);
+}
+.slide--lightning .slide__text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  transform: translateX(-25%);
+}
+
+#slide1:checked ~ .carousel__slides > .slide:nth-child(1) .slide__title,
+#slide1:checked ~ .carousel__slides > .slide:nth-child(1) .slide__text {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+#slide2:checked ~ .carousel__slides > .slide:nth-child(2) .slide__title,
+#slide2:checked ~ .carousel__slides > .slide:nth-child(2) .slide__text {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+#slide3:checked ~ .carousel__slides > .slide:nth-child(3) .slide__title,
+#slide3:checked ~ .carousel__slides > .slide:nth-child(3) .slide__text {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.75s;
+}
+
+.carousel__controls {
+  position: absolute;
+  z-index: 1;
+}
+.carousel__controls--prev, .carousel__controls--next {
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+.carousel__controls--prev:hover, .carousel__controls--next:hover {
+  opacity: 1;
+}
+.carousel__controls--prev {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
+}
+.carousel__controls--next {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.75), transparent);
+}
+.carousel__controls--progress {
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#slide1:checked ~ .carousel__slides > .carousel__slide:nth-child(1) {
+  opacity: 1;
+}
+
+#slide1:checked ~ .carousel__controls--prev > .carousel__btn:nth-child(1),
+#slide1:checked ~ .carousel__controls--next > .carousel__btn:nth-child(1) {
+  visibility: visible;
+}
+
+#slide1:checked ~ .carousel__controls--progress > .carousel__btn:nth-child(1) {
+  background-color: #fff;
+}
+
+#slide2:checked ~ .carousel__slides > .carousel__slide:nth-child(2) {
+  opacity: 1;
+}
+
+#slide2:checked ~ .carousel__controls--prev > .carousel__btn:nth-child(2),
+#slide2:checked ~ .carousel__controls--next > .carousel__btn:nth-child(2) {
+  visibility: visible;
+}
+
+#slide2:checked ~ .carousel__controls--progress > .carousel__btn:nth-child(2) {
+  background-color: #fff;
+}
+
+#slide3:checked ~ .carousel__slides > .carousel__slide:nth-child(3) {
+  opacity: 1;
+}
+
+#slide3:checked ~ .carousel__controls--prev > .carousel__btn:nth-child(3),
+#slide3:checked ~ .carousel__controls--next > .carousel__btn:nth-child(3) {
+  visibility: visible;
+}
+
+#slide3:checked ~ .carousel__controls--progress > .carousel__btn:nth-child(3) {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
