@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font($family: $primFont);
+  color: $primColor;
+  background-color: $primBgColor;
+}

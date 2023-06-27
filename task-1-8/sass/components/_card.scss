@@ -1,0 +1,99 @@
+.card {
+  max-width: 380px;
+  padding: 36px;
+
+  background-color: $primBgColor;
+  box-shadow: $cardShadow;
+  border-radius: $radiiXL;
+
+  @include media-desktop {
+    padding: 48px;
+  }
+}
+
+.card__img-wrap {
+  position: relative;
+  margin-bottom: 24px;
+
+  @include media-tablet {
+    margin-bottom: 36px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 56px;
+  }
+}
+
+.card__img--flying {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  filter: drop-shadow($iconShadow);
+  animation: fly 5s ease-in-out infinite alternate;
+}
+
+.card__title {
+  margin-bottom: 0.8em;
+
+  @include font($weight: 500, $size: 1.125rem, $height: 1.5, $spacing: 0.02em);
+  color: $secColor;
+
+  @include media-desktop {
+    @include font($size: 1.25rem);
+  }
+}
+
+.card__text {
+  $line-height: 1.62;
+
+  height: 1em * 4 * $line-height;
+  margin-bottom: 1.75em;
+
+  @include font($size: 0.875rem, $height: $line-height);
+  color: $secColor;
+
+  opacity: 0.6;
+  overflow: hidden;
+
+  @include media-tablet {
+    margin-bottom: 3.25em;
+
+    @include font($size: 1rem);
+  }
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @include font($weight: 500, $size: 14px, $spacing: 0.05em);
+  color: $primAccentColor;
+
+  transition: color $secHoverColor;
+
+  svg {
+    transition: transform $transitionProps;
+  }
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+
+    svg {
+      transform: translateX(50%);
+    }
+  }
+}
+
+// === Animations ===
+@keyframes fly {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}

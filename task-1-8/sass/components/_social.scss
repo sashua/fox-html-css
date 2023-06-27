@@ -1,0 +1,21 @@
+.social {
+  display: flex;
+  gap: 25px;
+}
+
+.social__link {
+  transition: color $transitionProps;
+
+  svg {
+    transition: transform $transitionProps;
+  }
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+
+    svg {
+      transform: scale(1.25);
+    }
+  }
+}

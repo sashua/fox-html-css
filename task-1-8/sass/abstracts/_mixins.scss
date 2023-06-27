@@ -1,0 +1,74 @@
+// === Fonts start ===
+@mixin font-face($family, $dir, $filename, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url("#{$dir}/#{$filename}.woff2") format("woff2"),
+      url("#{$dir}/#{$filename}.otf") format("opentype");
+  }
+}
+
+@mixin font(
+  $family: null,
+  $style: null,
+  $weight: null,
+  $size: null,
+  $height: null,
+  $spacing: null
+) {
+  font-family: $family;
+  font-style: $style;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+// --- Fonts end ---
+
+// === Responsible property start ===
+@mixin resp-prop(
+  $propName,
+  $maxValue,
+  $minValue: 0,
+  $maxViewWidth,
+  $minViewWidth: 320
+) {
+  $scaleFactor: calc(($maxValue - $minValue) / ($maxViewWidth - $minViewWidth));
+
+  // Static min value
+  #{$propName}: #{$minValue + px};
+
+  // Responsible value
+  @media (min-width: #{$minViewWidth + px}) and (max-width: #{$maxViewWidth + px}) {
+    #{$propName}: calc(
+      #{$minValue + px} + #{$scaleFactor} * (100vw - #{$minViewWidth + px})
+    );
+  }
+
+  // Static max value
+  @media (min-width: #{$maxViewWidth + px}) {
+    #{$propName}: #{$maxValue + px};
+  }
+}
+// --- Responsible property end ---
+
+// === Media queries start ===
+@mixin media-tablet {
+  @media screen and (min-width: $tabletBreak) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: $desktopBreak) {
+    @content;
+  }
+}
+
+@mixin media-desktop-l {
+  @media screen and (min-width: $desktopLargeBreak) {
+    @content;
+  }
+}
+// --- Media queries end ---

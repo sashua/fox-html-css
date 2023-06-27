@@ -1,0 +1,42 @@
+.nav__list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 50px;
+
+  height: 100%;
+  padding: 50px;
+
+  background-color: $primAccentColor;
+  box-shadow: $menuShadow;
+
+  @include media-tablet {
+    flex-flow: row;
+    padding: 0;
+
+    background-color: unset;
+    box-shadow: none;
+  }
+}
+
+.nav__link {
+  @include font($size: 1.5rem);
+  color: $whiteColor;
+
+  transition: color $transitionProps;
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+  }
+
+  @include media-tablet {
+    @include font($size: 1rem);
+    color: $primColor;
+
+    &:hover,
+    &:focus {
+      color: $primHoverColor;
+    }
+  }
+}

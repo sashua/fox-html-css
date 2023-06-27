@@ -1,0 +1,33 @@
+.quick-links__title {
+  display: inline-block;
+  margin-bottom: 1.8em;
+
+  @include font($weight: 500, $size: 1.125rem, $height: 1);
+
+  &:after {
+    content: "";
+    display: block;
+    width: 95%;
+    height: 2px;
+    margin-top: 2px;
+
+    background-color: currentColor;
+  }
+}
+
+.quick-links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+
+  @include font($size: 0.875rem, $height: 1);
+}
+
+.quick-links__link {
+  transition: color $transitionProps;
+
+  &:hover,
+  &:focus {
+    color: $secHoverColor;
+  }
+}
